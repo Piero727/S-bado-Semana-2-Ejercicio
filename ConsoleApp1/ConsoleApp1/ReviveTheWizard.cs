@@ -6,22 +6,17 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Start : TryCatch
+    internal class ReviveTheWizard : History, TryCatch
     {
         private int result;
-        public void BifurcatedHistory()
+        public override void BifurcatedHistory(Player player)
         {
-            Console.WriteLine("Introduce tu nombre");
-            string playerName = Console.ReadLine();
-            Player player = new Player(playerName, 200, 5.50f);
-            Console.WriteLine("Hola " + player.Name + ", tienes " + player.Life + " de vida y " + player.Money + " soles.");
-
-            Console.WriteLine(player.Name + " sale de su casa para ir a su parque favorito.");
-            Console.WriteLine("Para llegar a su parque favorito puede tomar el autobús volador o ir caminando.");
+            Console.WriteLine(player.Name + " decide revivir al mago usando toda su magia.");
+            Console.WriteLine("El mago revive, agradece a " + player.Name + " por devolverle la vida y quiere regalarle 4 libros de hechicería avanzada.");
+            Console.WriteLine(player.Name + " está pensando en aceptar los libros o no.");
             Console.WriteLine("Opciones: ");
-            Console.WriteLine("1.- Usar el autobus valor.");
-            Console.WriteLine("2.- Ir caminando.");
-
+            Console.WriteLine("1.- Recibir los libros");
+            Console.WriteLine("2.- No recibir los libros");
             Fallprotection();
 
             while (result < 1 || result > 2)
@@ -33,12 +28,15 @@ namespace ConsoleApp1
             switch (result)
             {
                 case 1:
-                    UseTheBus useTheBus = new UseTheBus();
-                    useTheBus.BifurcatedHistory(player);
+                    ReceiveTheBooks theBooks = new ReceiveTheBooks();
+                    theBooks.BifurcatedHistory(player);
                     break;
                 case 2:
-                    GoWalking goWalking = new GoWalking();
-                    goWalking.BifurcatedHistory(player);
+                    NotReceivingTheBooks notReceivingTheBooks = new NotReceivingTheBooks();
+                    notReceivingTheBooks.BifurcatedHistory(player);
+                    break;
+                default:
+                    Console.WriteLine("Error");
                     break;
             }
         }

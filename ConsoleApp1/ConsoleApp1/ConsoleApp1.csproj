@@ -43,12 +43,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BottleWithWater.cs" />
+    <Compile Include="End_2.cs" />
+    <Compile Include="HelpTheMagician.cs" />
+    <Compile Include="NotHelpingHim.cs" />
+    <Compile Include="NotReceivingTheBooks.cs" />
+    <Compile Include="PayHimHalf.cs" />
+    <Compile Include="DoNotGiveHimTheWaterBottle.cs" />
+    <Compile Include="End_1.cs" />
     <Compile Include="Enemy.cs" />
-    <Compile Include="Execute.cs" />
+    <Compile Include="GoWalking.cs" />
+    <Compile Include="HisAttacks.cs" />
+    <Compile Include="History.cs" />
+    <Compile Include="PayHim.cs" />
+    <Compile Include="ReceiveTheBooks.cs" />
+    <Compile Include="ReviveTheWizard.cs" />
+    <Compile Include="TryCatch.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Start.cs" />
+    <Compile Include="UseTheBus.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
